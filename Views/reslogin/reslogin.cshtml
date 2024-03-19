@@ -1,0 +1,43 @@
+﻿@model zerohungerv2.DTO.resloginDTO
+
+@{
+    ViewBag.Title = "reslogin";
+}
+
+<h2>Restaurant Login</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+ 
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.R_ID, new { htmlAttributes = new { @class = "form-control", placeholder = "Restaurant ID" } })
+                @Html.ValidationMessageFor(model => model.R_ID, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+           
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.R_PASS, new { htmlAttributes = new { @class = "form-control",placeholder="Password" } })
+                @Html.ValidationMessageFor(model => model.R_PASS, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Submit" class="btn btn-outline-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

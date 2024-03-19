@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ceac096420ec4c6f81e3bebe65903e07" Name="Diagram1">
+        <EntityTypeShape EntityType="zerohungerv2Model.COLLECT_RQST" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="zerohungerv2Model.DISTRIBUTION_RCRD" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="zerohungerv2Model.FOOD_ITEM" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="zerohungerv2Model.NGO_EMP" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="zerohungerv2Model.RESTAURANT" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <AssociationConnector Association="zerohungerv2Model.FK_COLLECT_RQST_COLLECT_RQST" ManuallyRouted="false" />
+        <AssociationConnector Association="zerohungerv2Model.FK_COLLECT_RQST_RESTAURANT" ManuallyRouted="false" />
+        <AssociationConnector Association="zerohungerv2Model.FK_FOOD_ITEM_COLLECT_RQST" ManuallyRouted="false" />
+        <AssociationConnector Association="zerohungerv2Model.FK_DISTRIBUTION_RCRD_FOOD_ITEM" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

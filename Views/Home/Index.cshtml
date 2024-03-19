@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Welcome to ZeroHunger!</h2>
+
+<div>
+    <button onclick="location.href='@Url.Action("reslogin", "Home")'">Restaurant Login</button>
+    <button onclick="location.href='@Url.Action("emplogin", "Home")'">Employee Login</button>
+    <button onclick="location.href='@Url.Action("adminLogin", "admin")'">Admin Login</button>
+</div>

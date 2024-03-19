@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Food Item";
+}
+
+<h2>Food Item Submission</h2>
+
+<form action="@Url.Action("SubmitFoodItem", "foodItem")" method="post">
+   
+
+    <div>
+        <label for="foodName">Food Name:</label>
+        <input type="text" id="foodName" name="foodName" required />
+    </div>
+
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" required />
+    </div>
+
+    <div>
+        <label for="expiryDate">Expiry Date:</label>
+        <input type="date" id="expiryDate" name="expiryDate" required />
+    </div>
+
+    <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "adminDash";
+}
+
+<h2>Admin Dashboard</h2>
+
+<h3>Collection Requests</h3>
+<table border="1">
+    <tr>
+        <th>Collect Request ID</th>
+        <th>Restaurant ID</th>
+        <th>Employee ID</th>
+        <th>MAX PRESERVE Time</th>
+        <th>Status</th>
+        <th>Food Name</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var request in ViewBag.CollectionRequests)
+    {
+        <tr>
+            <td>@request.C_ID</td>
+            <td>@request.R_ID</td>
+            <td>@request.E_ID</td>
+            <td>@request.MAX_PRESERVE_Time</td>
+            <td>@request.Status</td>
+            <td>@request.Food_Name</td>
+            <td><a href="@Url.Action("AssignEmployee", "admin", new { cId = request.C_ID })">Assign Employee</a></td>
+        </tr>
+    }
+</table>
+
+<h3>Distribution Table</h3>
+<table border="1">
+    <tr>
+        <th>Distribute ID</th>
+        <th>Food ID</th>
+        <th>DISTRIBUTE DATE</th>
+        <th>RECIPIENT</th>
+        <th>Quantity DISTRIBUTE</th>
+    </tr>
+    @foreach (var distribution in ViewBag.Distributions)
+    {
+        <tr>
+            <td>@distribution.D_ID</td>
+            <td>@distribution.F_ID</td>
+            <td>@distribution.DISTRIBUTE_DATE</td>
+            <td>@distribution.RECIPIENT</td>
+            <td>@distribution.QT_DISTRIBUTE</td>
+        </tr>
+    }
+</table>
